@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body
+{
+	font-family: Helvetica, Arial, verdana, sans-serif;
+	color: white;
+
+	background-image: url(logo.png);
+	background-repeat: no-repeat;
+	background-position: 0px 15px;
+	background-color: black;
+	cursor: none;
+    overflow:hidden;
+}
+
+html,body{
+    height: 100%
+}
+
+footer{
+
+    width: 100%;
+    position: absolute;
+    bottom: 0; 
+}
+
+header{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.date
+{
+    font-size: 3vmax;
+    font-family: Montserrat, Helvetica, Arial, verdana, sans-serif;
+    font-weight: 700;
+	width: 100%;
+	text-align: right;
+}
+
+.time
+{
+    text-align: center;
+    font-size: 12vmax;
+    font-family: Montserrat, Helvetica, Arial, verdana, sans-serif;
+    font-weight: 700; 
+	width: 100%;
+}
+
+.countdown
+{
+	font-size: 4.5vw;
+    font-family: Montserrat, Helvetica, Arial, verdana, sans-serif;
+    font-weight: 400;
+	text-align: center;
+    display: none;
+}
+
+.no_news_div
+{
+    display: none;
+}
+
+.motd
+{
+    font-family: Montserrat, Helvetica, Arial, verdana, sans-serif;
+    font-weight: 400;
+	font-size: 3.0vmax;
+	text-align: center;
+    line-height: 105%;
+}
+
+.info th
+{
+	font-size: 3vh;
+    font-family: Montserrat, Helvetica, Arial, verdana, sans-serif;
+    font-weight: 700; 
+	text-align: right;
+	font-weight: bold;
+    line-height: 95%;
+
+}
+
+.info td
+{
+	font-size: 2vmax;
+	font-family: Montserrat, Helvetica, Arial, verdana, sans-serif;
+    font-weight: 400; 
+    text-align: left;
+}
+
+.countdown2 th
+{
+	font-size: 2vmax;
+    font-family: Montserrat, Helvetica, Arial, verdana, sans-serif;
+    font-weight: 700; 
+	text-align: left;
+	font-weight: bold;
+
+}
+
+.countdown2 td
+{
+	font-size: 2vmax;
+	font-family: Montserrat, Helvetica, Arial, verdana, sans-serif;
+    font-weight: 400; 
+    text-align: left;
+}
+.credit
+{
+	font-family: Geneva, Helvetica, Arial, verdana, sans-serif;
+	font-size: 10px;
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	width: 100%;
+	text-align: right;
+	color: #FFF;
+}
+
+.last_updated
+{
+    font-family: Montserrat, Helvetica, Arial, verdana, sans-serif;
+    font-weight: 400;
+	font-size: 0.8vmax;
+    text-align: right;
+	color: #FFF;
+}
+
+table#info {
+
+  width: auto;
+}
+
+
+table#info th {
+  text-align: right;
+}
+
+table#info td {
+  text-align: left;
+  position: relative; 
+  left: 10px;
+}
+
+table#countdown2 th {
+  text-align: right;
+}
+
+table#countdown2 td {
+  text-align: left;
+  position: relative; 
+  left: 10px;
+}
+
+div.progress_holder {
+	width: 100%;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	height: 10px;
+}
+
+div.progress {
+	width: 50%;
+	margin: auto;
+	height: 10px;
+	background-color: #332a54;
+	border-bottom: 2px #6654a8 solid; /* purple */
+	/*border-bottom: 1px white solid; */ /* white */
+}
+
+div#prog {
+	height: 10px;
+	background-color: #81cfc2;
+	width: 0px;
+}
+.fullh {
+    position: absolute;
+    top: 15%;
+}

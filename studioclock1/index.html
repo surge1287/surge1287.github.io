@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0035)http://surgeradio.co.uk/studioclock -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>studioclock2-basic</title>
+        
+        <link rel="stylesheet" type="text/css" href="./style/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="./style/studioclock.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+                <script type="text/javascript">
+                    var news_length_fudge = 1.7;
+                    var additional_skew = 0;
+                    var use_server_time = false;
+                </script>
+        <script type="text/javascript" src="./js/bootstrap.js"></script>	
+        <script type="text/javascript" src="./js/studioclock.js"></script>
+        
+    </head>
+
+    <header>
+        <div class="container-fluid"> 
+            
+            <div class="row">
+            
+                <div class="col-md-12">
+                
+                    <div class="date">
+                        <span id="date"></span>
+                    </div>
+            
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                    <div class="col-md-12">
+                        <div class="last_updated">Last Updated: 
+                            <span id="last_update"></span></div>
+                    </div>
+            </div>
+            
+        </div>
+    </header>
+
+	<body>
+    <div class="container-fluid fullh">
+        
+        <div class="row">
+            <div class="col-md-12">
+                        <div class="time"><span id="time"></span></div>
+                        <div class="motd" id="motd-div"><b>Message of the Day:</b><span id="motd"></span></div>
+            </div>
+
+        </div>       
+    </div>
+        
+<footer class="footer">
+<div class="container-fluid">
+        <div class="info col-md-8" id="info-div">
+                <table id="info">
+                    <tbody><tr>
+                        <th>Transmit Selector:</th>
+                        <td id="source"></td>
+                    </tr>
+                    <tr>
+                        <th id="programme_name_title">Show Name:</th>
+                        <td id="programme_name"></td>
+                    </tr>
+                    <tr>
+                        <th id="programme_djs_title">Show DJs:</th>
+                        <td id="programme_djs"></td>
+                    </tr>
+                </tbody></table>
+        </div>
+        
+        <div class="countdown2 col-md-4">
+                <table id="countdown2">
+                    <tbody><tr>
+                        <th>Show minutes left:</th>
+                        <td id="min-part"> </td>
+                    </tr> 
+                    <tr>
+                        <th>Show seconds left:</th>
+                        <td id="sec-part"></td>
+                    </tr>
+                </tbody></table>
+    
+                    <script>
+                      var byId = document.getElementById.bind(document);
+
+                      function updateTime()
+                      {
+                        var
+                          time = new Date(),
+                          // take 1800 seconds (30 minutes) and substract the remaining minutes and seconds
+                          // 30 minutes mark is rest of (+30 divided by 60); *60 in seconds; substract both, mins & secs
+                          secsRemaining = 3600 - (time.getUTCMinutes())%60 * 60 - time.getUTCSeconds(),
+                          // integer division
+                          mins = Math.floor(secsRemaining / 60),
+                          secs = secsRemaining % 60
+                        ;
+                        byId('min-part').textContent  = mins;
+                        byId('sec-part').textContent  = secs;
+
+                        // let's be sophisticated and get a fresh time object
+                        // to calculate the next seconds shift of the clock
+                        setTimeout( updateTime, 1000 - (new Date()).getUTCMilliseconds() );
+                      }
+
+                      updateTime();
+                        
+
+
+                    </script>
+            </div>
+</div>
+</footer>
+            
+            <div class="countdown">
+                <span id="countdown"></span>
+            </div>
+
+            <div class="no_news_div">
+                <span id="no_news"></span>
+            </div>
+ 
+        
+        
+    </body>          
+
+        
+</html>
