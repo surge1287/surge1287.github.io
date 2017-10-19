@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0035)http://surgeradio.co.uk/studioclock -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#44c8ff">
+        <title>SurgeClock 4</title>
+        
+        <link rel="stylesheet" type="text/css" href="./style/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="./style/studioclock.css">
+        <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+        
+        <link type="image/x-icon" rel="icon" href="https://www.surgeradio.co.uk/style/images/favicon.ico?v=03102013" />
+		<link type="image/x-icon" rel="shortcut icon" href="https://www.surgeradio.co.uk/style/images/favicon.ico?v=03102013" />
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+                <script type="text/javascript">
+                    var news_length_fudge = 1.7;
+                    var additional_skew = 0;
+                    var use_server_time = false;
+                </script>
+        <script type="text/javascript" src="./js/bootstrap.js"></script>	
+        <script type="text/javascript" src="./js/studioclock.js"></script>
+        
+    </head>
+
+	<body>
+         <div class="container-fluid footer">  
+            <div class="row">
+                <div class="col-md-12">
+                    <iframe id="zetta_embed" name="zetta_embed" type="text/html" frameborder="0" width="100%" height="735" scrolling="no" src="https://moss.surge.soton.ac.uk/Zetta2Go"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid motd">
+            <div class="col-md-12" id="motd-div" style="font-size: 6vmin;text-align:center;line-height: 50px">
+            <span id="motd"></span>
+            </div>
+        </div>
+        <div class="container-fluid footer">   
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe id="weather_embed" name="weather_embed" type="text/html" frameborder="0" height="245" width="100%" scrolling="no" src="./iframes/weather_iframe.html"> </iframe>
+                </div>
+                <div class="col-md-6">
+                    <iframe id="news_embed" name="news_embed" width="100%" height="245" scrolling="no" frameBorder="0" src="./iframes/news_iframe.html" />
+                </div>
+            </div>
+        </div> 
+    </body>   
+</html>

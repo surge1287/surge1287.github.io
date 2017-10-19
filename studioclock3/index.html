@@ -23,23 +23,64 @@
                 </script>
         <script type="text/javascript" src="./js/bootstrap.js"></script>	
         <script type="text/javascript" src="./js/studioclock.js"></script>
+        <script type="text/javascript" src="./js/studioclock2.js"></script>
         
     </head>
+    
+    <holder>
+    
+        <!--<div class="progress_holder">
+		<div class="progress">
+		<div id="prog"></div>
+		</div>
+		</div>-->
+        
+    <header>
+    </header>
 
-	<body>
-         <div class="container-fluid footer">  
-            <div class="row">
-                <div class="col-md-12">
-                    <iframe id="zetta_embed" name="zetta_embed" type="text/html" frameborder="0" width="100%" height="735" scrolling="no" src="https://moss.surge.soton.ac.uk/Zetta2Go"></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid motd">
-            <div class="col-md-12" id="motd-div" style="font-size: 6vmin;text-align:center;line-height: 50px">
+<body>
+    <div class="time"> 
+        <script type="text/javascript">
+            tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+            tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+            function GetClock(){
+            var d=new Date();
+            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+            if(nmin<=9) nmin="0"+nmin
+            if(nsec<=9) nsec="0"+nsec;
+
+            document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" <p> "+nhour+":"+nmin+":"+nsec+" ";
+            }
+
+            window.onload=function(){
+            GetClock();
+            setInterval(GetClock,600);
+            }
+        </script>
+        <div id="clockbox" class="time2"></div>
+    </div>        
+</body>
+        
+<footer>
+    <div class="motd">
+            <div class="col-md-12" id="motd" style="font-size: 4.2vmin;text-align:center;line-height: 55px;width:100%">
             <span id="motd"></span>
+    </div>
+    
+    <div class="tunein">   
+        <div class="row">
+            <div class="col-md-12">
+                <iframe src="https://tunein.com/embed/player/s37346/" style="width:100%;height:100px;" scrolling="no" frameborder="no"></iframe>
             </div>
         </div>
-        <div class="container-fluid footer">   
+    </div>
+    
+
+
+
+        <div class="container-fluid" style="background-color: white">   
             <div class="row">
                 <div class="col-md-6">
                     <iframe id="weather_embed" name="weather_embed" type="text/html" frameborder="0" height="245" width="100%" scrolling="no" src="./iframes/weather_iframe.html"> </iframe>
@@ -48,6 +89,14 @@
                     <iframe id="news_embed" name="news_embed" width="100%" height="245" scrolling="no" frameBorder="0" src="./iframes/news_iframe.html" />
                 </div>
             </div>
-        </div> 
-    </body>   
+        </div>
+</footer>
+        
+        
+        
+</holder>
+    
+    
+
+        
 </html>
