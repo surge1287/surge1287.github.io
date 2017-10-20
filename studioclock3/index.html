@@ -8,82 +8,46 @@
         <meta name="theme-color" content="#44c8ff">
         <title>SurgeClock 3</title>
         
+        <link type="image/x-icon" rel="icon" href="https://www.surgeradio.co.uk/style/images/favicon.ico?v=03102013" />
+		<link type="image/x-icon" rel="shortcut icon" href="https://www.surgeradio.co.uk/style/images/favicon.ico?v=03102013" />        
+        
         <link rel="stylesheet" type="text/css" href="./style/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="./style/studioclock.css">
         <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
-        
-        <link type="image/x-icon" rel="icon" href="https://www.surgeradio.co.uk/style/images/favicon.ico?v=03102013" />
-		<link type="image/x-icon" rel="shortcut icon" href="https://www.surgeradio.co.uk/style/images/favicon.ico?v=03102013" />
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                 <script type="text/javascript">
                     var news_length_fudge = 1.7;
                     var additional_skew = 0;
                     var use_server_time = false;
                 </script>
+        
         <script type="text/javascript" src="./js/bootstrap.js"></script>	
         <script type="text/javascript" src="./js/studioclock.js"></script>
-        <script type="text/javascript" src="./js/studioclock2.js"></script>
+        <script type="text/javascript" src="./js/clock.js"></script>
         
     </head>
-    
-    <holder>
-    
-        <!--<div class="progress_holder">
-		<div class="progress">
-		<div id="prog"></div>
-		</div>
-		</div>-->
-        
-    <header>
-    </header>
-
-<body>
-<div class="main" style="background-image: url(bg.jpg);height: 735px;position:relative">
-    <div class="time"> 
-        <script type="text/javascript">
-            tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-            tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-
-            function GetClock(){
-            var d=new Date();
-            var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
-            var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
-            if(nmin<=9) nmin="0"+nmin
-            if(nsec<=9) nsec="0"+nsec;
-
-            document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" <p> "+nhour+":"+nmin+":"+nsec+" ";
-            }
-
-            window.onload=function(){
-            GetClock();
-            setInterval(GetClock,600);
-            }
-        </script>
-        <div id="clockbox" class="time2"></div>
-    </div>
-        <div class="motd">
-            <div class="col-md-12" id="motd" style="font-size: 4.2vmin;text-align:center;line-height: 55px;width:100%; 	background-color: rgba(68, 200, 255, .75);;position:absolute;bottom:0">
-            <span id="motd"></span>
-        </div>
-    </div>
-    </div>
-</body>
-        
-<footer>
-
-    
-    <div class="tunein">   
-        <div class="row">
-            <div class="col-md-12">
-                <iframe src="https://tunein.com/embed/player/s37346/" style="width:100%;height:100px;" scrolling="no" frameborder="no"></iframe>
+    <body>
+        <div class="main" style="background-image: url(bg.jpg);height: 735px;position:relative">
+            <div class="time"> 
+                <div id="clockbox" class="time2"></div>
+            </div>
+            <div class="motd">
+                <div class="col-md-12" id="motd" style="font-size: 4.2vmin;text-align:center;line-height: 55px;width:100%;background-color: rgba(68, 200, 255, .75);;position:absolute;bottom:0">
+                    <span id="motd"></span>
+                </div>
             </div>
         </div>
-    </div>
-    
+    </body>
 
-
-
+    <footer>
+        <div class="tunein">   
+            <div class="row">
+                <div class="col-md-12">
+                    <iframe src="https://tunein.com/embed/player/s37346/" style="width:100%;height:100px;" scrolling="no" frameborder="no"></iframe>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid" style="background-color: white">   
             <div class="row">
                 <div class="col-md-6">
@@ -94,13 +58,5 @@
                 </div>
             </div>
         </div>
-</footer>
-        
-        
-        
-</holder>
-    
-    
-
-        
+    </footer>      
 </html>
