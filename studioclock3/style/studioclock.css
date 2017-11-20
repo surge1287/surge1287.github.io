@@ -13,7 +13,7 @@ body
     color: white;
 }
 
- footer {
+footer {
     background-color: white;
     position: absolute;
     left: 0;
@@ -27,7 +27,7 @@ html,body{
 
 .time2
 {
-    font-size: 8vmax;
+    font-size: 7vmax;
     font-family: 'Signika', sans-serif;
     font-weight: 700; 
 	text-align: center;
