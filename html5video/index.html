@@ -3,10 +3,8 @@
 </head>
 
 <body>
-  <video id="livestream" class="video-js" controls preload="auto" width="640" height="264"
-  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-    <source src="MY_VIDEO.mp4" type='rtmp/mp4'>
+  <video id=example-video width=960 height=540 class="video-js vjs-default-skin" controls>
+    <source src="http://stream.susu.org/surgecam/_definst_/obs/studio1/webcam_1/manifest.mpd" type="application/dash+xml">
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a web browser that
       <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
@@ -14,4 +12,11 @@
   </video>
 
   <script src="https://vjs.zencdn.net/6.4.0/video.js"></script>
+  <script src="dash.all.min.js"></script>
+  <script src="videojs-dash.js"></script>
+  <script>
+    var player = videojs('example-video');
+    player.play();
+  </script>
+    
 </body>
