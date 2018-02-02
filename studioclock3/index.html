@@ -1,62 +1,66 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0035)http://surgeradio.co.uk/studioclock -->
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#44c8ff">
-        <title>SurgeClock 3</title>
-        
-        <link type="image/x-icon" rel="icon" href="https://www.surgeradio.co.uk/style/images/favicon.ico?v=03102013" />
-		<link type="image/x-icon" rel="shortcut icon" href="https://www.surgeradio.co.uk/style/images/favicon.ico?v=03102013" />        
-        
-        <link rel="stylesheet" type="text/css" href="./style/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="./style/studioclock.css">
-        <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                <script type="text/javascript">
-                    var news_length_fudge = 1.7;
-                    var additional_skew = 0;
-                    var use_server_time = false;
-                </script>
-        
-        <script type="text/javascript" src="./js/bootstrap.js"></script>	
-        <script type="text/javascript" src="./js/studioclock.js"></script>
-        <script type="text/javascript" src="./js/clock.js"></script>
-        
-    </head>
-    <body>
-        <div class="main" style="background-image: url(bg_xmas.jpg);height: 735px;position:relative">
-            <div class="time"> 
-                <div id="clockbox" class="time2"></div>
-            </div>
-            <div class="motd">
-                <div class="col-md-12" id="motd" style="font-size: 4vmin;text-align:center;line-height: 58px;width:100%;background-color: rgba(68, 200, 255, .75);;position:absolute;bottom:10px">
-                    <span id="motd"></span>
-                </div>
-            </div>
-        </div>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#44c8ff">
+    <title>SurgeClock 3</title>
 
-    <footer>
-        <div class="tunein">   
-            <div class="row">
-                <div class="col-md-12">
-                    <iframe id="tunein_embed" name="tunein_embed" type="text/html" style="width:100%;height:110px" scrolling="no" frameborder="no" src="./iframes/tunein_iframe.html"> </iframe>
-                </div>
+    <link type="image/x-icon" rel="icon" href="https://www.surgeradio.co.uk/style/images/favicon.ico?v=03102013" />
+    <link type="image/x-icon" rel="shortcut icon" href="https://www.surgeradio.co.uk/style/images/favicon.ico?v=03102013" />
+
+    <link rel="stylesheet" type="text/css" href="./style/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./style/studioclock.css">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var news_length_fudge = 1.7;
+        var additional_skew = 0;
+        var use_server_time = false;
+
+    </script>
+
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/studioclock.js"></script>
+    <script type="text/javascript" src="./js/clock.js"></script>
+
+</head>
+
+<body>
+    <div class="main" style="background-image: url(bg.jpg);height: 735px;position:relative">
+        <div class="time">
+            <div id="clockbox" class="time2"></div>
+        </div>
+        <div class="motd">
+            <div class="col-md-12" id="motd" style="font-size: 4vmin;text-align:center;line-height: 58px;width:100%;background-color: rgba(68, 200, 255, .75);;position:absolute;bottom:10px">
+                <span id="motd"></span>
             </div>
         </div>
-        <div class="container-fluid" style="background-color: white">   
-            <div class="row">
-                <div class="col-md-6">
-                    <iframe id="weather_embed" name="weather_embed" type="text/html" frameborder="0" height="245" width="100%" scrolling="no" src="./iframes/weather_iframe.html"> </iframe>
-                </div>
-                <div class="col-md-6">
-                    <iframe id="news_embed" name="news_embed" width="100%" height="245" scrolling="no" frameBorder="0" src="./iframes/news_iframe.html"> </iframe>
-                </div>
+    </div>
+</body>
+
+<footer>
+    <div class="tunein">
+        <div class="row">
+            <div class="col-md-12">
+                <iframe id="tunein_embed" name="tunein_embed" type="text/html" style="width:100%;height:110px" scrolling="no" frameborder="no" src="./iframes/tunein_iframe.html"> </iframe>
             </div>
         </div>
-    </footer>      
+    </div>
+    <div class="container-fluid" style="background-color: white">
+        <div class="row">
+            <div class="col-md-6">
+                <iframe id="weather_embed" name="weather_embed" type="text/html" frameborder="0" height="245" width="100%" scrolling="no" src="./iframes/weather_iframe.html"> </iframe>
+            </div>
+            <div class="col-md-6">
+                <iframe id="news_embed" name="news_embed" width="100%" height="245" scrolling="no" frameBorder="0" src="./iframes/news_iframe.html"> </iframe>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </html>
